@@ -1,0 +1,38 @@
+.tabBtn li{
+	display: inline-block; 
+	width: 159px; 
+	height: 33px; 
+	padding-top: 17px; 
+	text-align: center; 
+	background: #fff;  
+	margin-right: 1px; 
+	font-family: "NanumBold"; 
+	font-size: 15px; 
+	line-height: 1.2; 
+	color:#777; 
+}
+
+.tabBtn a.now{
+	background-color: #1fcbc7;
+}
+
+h2{
+	color: red;
+}
+
+.title div{
+	text-align: center;
+	position: relative;
+}
+
+ul.productList{
+	overflow: hidden;
+    padding: 0;
+    /*width: 960px;*/
+    margin-left: 10px;
+    list-style: none;
+}
+
+.productList li{
+	display: inline-block;
+}

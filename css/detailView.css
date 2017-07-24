@@ -1,0 +1,457 @@
+/*=============common==============*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	/*마진 패딩 보더를 기본적으로 리셋을 시켜줘야하는구나*/
+	font-size:100%;
+	font-weight: normal;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+div{
+	display: block;	
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*=============top=================*/
+div.wrapper {
+	position: relative;
+}
+
+div.top_wrap {
+	background-color: red;
+	position: relative;
+	border-bottom: 1px solid;
+}
+
+div.top_mid{
+	background-color: orange;
+	height: 36px;
+	width: 980px;
+	/*이걸로 안쪽 디브 크기 맞춤*/
+	position: relative;
+	margin: 0 auto;
+}
+
+div.link_app{
+	background-color: yellow;
+	float: left;
+}
+
+.link_app > a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 11px 9px;
+	/*이걸로 글씨 디브안에서 자기 위치 맞춤*/
+}
+
+ul.account {
+	margin: 0px;
+	/*이거 안 주면 혼자 밑으로 내려옴*/
+	background-color: green;
+	position: relative;
+	float: right;	
+}
+
+.account > li{
+	float: left;
+	position: relative;
+}
+
+.account > li > a {
+	display: block;
+	height: 17px;
+	padding: 10px 10px 9px 10px;
+	text-align: center;
+}
+
+/*=============header==============*/
+div.header_wrap {
+	position: relative;
+}
+
+div.header_mid {
+	background-color: red;
+	position: relative;
+	height: 98px;
+	width: 980px;
+	margin: 0 auto;
+}
+
+.header_mid h1{
+	background-color: orange;
+	float: left;
+	margin: 16px 0 0 0;
+}
+
+form.searchbar {
+	background-color: yellow;
+	position: relative;
+	float: left;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+.searchbar > input{
+	width: 178px;
+	height: 38px;
+	border-width: 1px;
+	border-style: solid;
+}
+.searchbar > button{
+	background-color: yellow;
+	/*background: url(./img/searchIcon.png) center;*/
+	/*이렇게 하던데... 잘 안되네... */
+	width: 38px;
+	height: 38px;
+	/*position: absolute;*/
+	top: 2px;
+	right: 0;
+	border: 0px;
+}
+
+ul.header_btn{
+	float: right;
+}
+.header_btn > li{
+	float: left;
+}
+.header_btn > li > a {
+	display: block;
+	height: 48px;
+	margin: 25px 0 25px 20px;
+	/*마지막 원래 50px인데 넘어가서 20줌... 문제*/
+}
+.header_btn > li > a > img{
+	display: block;
+}
+
+/*=============nav=================*/
+div.nav_wrap {
+	position: relative;
+	background: #483f35;
+}
+
+nav.navi {
+	width: 980px;
+	height: 52px;
+	margin:  0 auto;
+	overflow: visible;
+
+	display: block;
+}
+
+ul.nav_btn {	
+}
+
+.nav_btn > li{
+	width: 120px;
+	/* 실제론 네비게이션 글씨마다 id 통해 크기가 다름 */
+	float: left;
+	/* 아래위를 좌우나열로 바꿈 */
+	position: relative;
+	text-align: left;
+}
+
+.nav_btn > li > a{
+	display: block;
+	padding: 5px 0 0 1px;
+	text-decoration: none;
+}
+
+.nav_btn > li > a > span{
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	height: 36px;
+	text-align: center;
+	letter-spacing: 0px;
+	padding: 11px 25px 0px;
+}
+
+/*              main            */
+div#container{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+div.wrap{
+	position: relative;
+}
+div.content{
+	position: relative;
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+ul.breadcrumb.detail{
+	overflow: hidden;
+	height: 32px;
+	padding-top: 25px;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	z-index: 100;
+}
+
+ul.breadcrumb li{
+	float: left;
+	font-size: 13px;
+}
+ul.breadcrumb li a{
+	color: #888;
+	padding: 0 0 0 22px;
+}
+ul.breadcrumb li:last-child a{
+	color: black;
+	padding: 0 0 0 22px;
+}
+
+
+div.product_detail_top{
+	position: relative;
+	padding:  50px 0 0 450px;
+}
+div.product_detail_top .detail_top_image{
+	position: relative;
+	float: left;
+	left: -450px;
+	top: 0;
+	width: 400px;
+	margin-right: -450px;
+}
+div.detail_top_image .image_top{
+	position: relative;
+	display: block;
+	width: 400px;
+	height: 400px;
+	/*background: #eeedec 
+		url(../../web/common/detail_top_image_bg.png) 
+		center center no-repeat;*/
+}
+.product_detail_top img{
+	display: block;
+	/*width: 100px;*/
+	height: 100%;
+}
+.detail_top_image .image_top .brd_box{
+	width: 390px;
+	height: 398px;
+}
+div.detail_top_image .image_top .thumb_badge{
+	top: 20px;
+	right: 16px;
+}
+.thumb_badge{
+	position: absolute;
+	width: 68px;
+	height: 48px;
+	padding-top: 20px;
+	color: white;
+	text-align: center;
+
+}
+.thumb_badge span.num{
+	font-weight: bold;
+	font-size: 20px;
+}
+.thumb_badge span.unit{
+	font-size: 15px;
+}
+
+.detail_top_image .image_thumb{
+	position: relative;
+	height: 72px;
+	margin: 15px 10px 0 0;
+}
+.detail_top_image .top_thumb{
+	display: block;
+	float: left;
+	position: relative;
+	width: 72px;
+	height: 72px;
+	margin-right: 10px;
+	background: #eeedec;
+}
+/*            설명          */
+div.product_detail_top .detail_top_desc{
+	position: relative;
+	float: right;
+	width: 100%
+}
+div.badge.launching{
+	position: relative;
+	display: block;
+	float: left;
+	background: #a974bf;
+	padding: 6px 0 5px;
+	width: 60px;
+	text-align: center;
+}
+
+div.badge{
+	display: inline-block;
+    zoom: 1;
+    margin: 0 3px 0 0;
+    padding: 7px 0 4px;
+    min-width: 52px;
+    height: 11px;
+    line-height: 11px;
+    text-align: center;
+    font-size: 11px;
+    color: #fff;
+}
+
+.detail_top_desc .desc_product_name{
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding: 30px 0 0 0;
+}
+.detail_top_desc .desc_bt_txt{
+	color: black;
+	font-size: 14px;
+	line-height: 1.6;
+	padding: 10px 0 0 0;
+}
+.detail_top_desc .desc_info{
+	position: relative;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 115px;
+	line-height: 1.85;
+	overflow: hidden;
+	list-style: none;
+}
+.desc_info dt{
+	position: relative;
+	float: left;
+	clear: both;
+	left: -115px;
+	margin-right: -115px;
+	clear: #999;
+	padding: 4px 0 0 0;
+}
+.desc_info dd{
+	position: relative;
+	float: right;
+	width: 100%;
+	padding: 4px 0 0 0;
+}
+
+
+.desc_info .desc_price{
+	font-size: bold;
+	text-align: right;
+	line-height: 1.2;
+	padding-top: 0;
+}
+.desc_info .origin_price{
+	color: #888;
+	font-size: 20px;
+	text-decoration: line-through;
+	padding-right: 10px;
+}
+.desc_info .origin_price .unit{
+	top: -2px;
+	font-size: 15px;
+}
+.desc_info .desc_price .unit{
+	position: relative;
+	display: inline-block;
+	padding-left: 4px;
+}
+.desc_info .price{
+	font-size: 33px;
+	font-weight: bold;
+}
+
+.desc_option_calc{
+	clear: both;
+	position: relative;
+	border-top: 1px solid #E1E1E1;
+	margin-top: 30px;
+	padding: 17px 0 0 0;
+}
+.option_only_quantity{
+	position: relative;
+	padding: 2px 0 15px 0;
+	border-bottom: 1px solid #E1E1E1;
+}
+.desc_option_calc dl{
+	position: relative;
+	padding: 0 0 0 11px;
+	overflow: visible;
+	list-style: none;
+}
+
+.calculated_price{
+	font-size: 16px;
+	margin-top: 25px;
+	text-align: right;
+	line-height: 1.6;
+}
+.calculated_price .price_label{
+	margin-right: 11px;
+	font-size: 16px;
+}
+.calculated_price .price_label, .calculated_price .price_number, .calculated_price .unit{
+	display: inline-block;
+	vertical-align: middle;
+}
+.calculated_price .price_number{
+	position: relative;
+    top: -2px;
+    color: #2ac1bc;
+    font-family: Verdana;
+    font-size: 33px;
+    line-height: 34px;
+    font-weight: bold;
+}
+.calculated_price .unit{
+	color: #2ac1bc;
+    font-family: NanumEB;
+    font-size: 18px;
+}
+
+.desc_option_calc .btn_into_basket, .desc_option_calc .btn_detail_soldout{
+	display: block;
+    width: 100%;
+    height: 66px;
+    margin: 20px 0 0 0;
+    font-size: 24px;
+    overflow: visible;
+    text-align: center;
+}
+.btn_mint{
+	background: #2ac1bc;
+    color: #fff;
+}
+.btn{
+	zoom: 1;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}

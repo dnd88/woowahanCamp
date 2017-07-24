@@ -1,0 +1,28 @@
+						{{#each items}}
+							<li class="prds_box">
+								<a href="javascript:void(0)" class="real_btn" id="{{this.detail_hash}}">
+									<div class="thumb_img">
+										<p>
+											<img src="{{this.image}}" id="{{this.detail_hash}}">
+										</p>	
+									</div>
+									<dl>
+										<dt class="prd_title" id="{{this.detail_hash}}">{{this.title}}</dt>
+										<dd class="prd_desc" id="{{this.detail_hash}}">{{this.description}}</dd>
+										<dd class="prd_price">
+											<span class="price" id="{{this.detail_hash}}">{{this.s_price}}
+												<span class="won">원
+													{{#if this.badge}}
+														할인특가?
+													{{else}}	
+													
+													{{/if}}
+												</span>							
+											</span>				
+										</dd>
+									</dl>
+								</a>
+							</li>
+						{{/each}}
+
+

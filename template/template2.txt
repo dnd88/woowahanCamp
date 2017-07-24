@@ -1,0 +1,72 @@
+
+                        <div class="detail_top_image">
+                            <div class="image_top">
+                                <img src="{{data.top_image}}" alt="" class="top_detail_image">
+                                <i class="brd_box"></i>
+                                <div class="thumb_badge"><span class="num">10</span><span class="unit">%</span></div>
+                            </div>
+
+                            <div class="image_thumb">
+                            {{#each data.thumb_images}}
+                                <a href="#" class="top_thumb">
+                                    <img src="{{this}}" alt="">
+                                    <i class="brd_box"></i>
+                                </a>
+                            {{/each}}    
+                                <span class="top_thumb"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail_top_desc">
+                            <div class="badge launching"><span>론칭특가</span></div>
+                            <h1 class="desc_product_name">이런, 타이틀도 전페이지에서 받아와야하네</h1>
+                            <p class="desc_bt_txt">{{data.product_description}} </p>
+                            <dl class="desc_info">
+                                <dt>적립금</dt>
+                                <dd>{{data.point}}</dd>
+                                <dt>배송정보</dt>
+                                <dd>
+                                    {{data.delivery_info}}
+                                </dd><dt>배송비</dt>
+                                <dd>{{data.delivery_fee}}</dd>
+                                <dt class="blind">가격</dt>
+                                <dd class="desc_price">
+                                {{#each data.prices}}
+                                   
+                                    <span class="origin_price">{{this}}<span class="unit"></span></span>
+                                  
+                                    {{#if @last}} 
+                                    <strong class="price">{{this}}<span class="unit"></span></strong>
+                                    {{/if}}
+                                {{/each}}   
+                                </dd>
+                            </dl>
+
+                            <div class="desc_option_calc clearfix">
+                                <form onsubmit="return false;">
+                                    <fieldset>
+                                        <legend class="blind">옵션별 상품 금액 계산</legend>
+                                        <div class="option_only_quantity">
+                                            <dl class="clearfix">
+                                                <dt>수량</dt>
+                                                <dd>
+                                                    <div class="prd_account fRight">
+                                                        <label><input class="buy_cnt" type="text" name="amount" value="1"></label>
+                                                        <span>
+                                                            <a href="#" title="수량 더하기" class="up">수량 더하기</a>
+                                                            <a href="#" title="수량 빼기" class="down">수량 빼기</a>
+                                                        </span>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <p class="calculated_price">
+                                            <span class="price_label">총 상품금액</span>
+                                            <strong id="detail_total_price" class="price_number">????</strong> <span class="unit">원</span>
+                                        </p>
+                                        <button type="button" class="btn btn_mint btn_into_basket purchageable">담기</button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>                        
+                   

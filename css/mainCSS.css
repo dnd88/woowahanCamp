@@ -1,0 +1,573 @@
+/*=============common==============*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	/*마진 패딩 보더를 기본적으로 리셋을 시켜줘야하는구나*/
+	font-size:100%;
+	font-weight: normal;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+div{
+	display: block;	
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*=============top=================*/
+div.wrapper {
+	position: relative;
+}
+
+div.top_wrap {
+	background-color: red;
+	position: relative;
+	border-bottom: 1px solid;
+}
+
+div.top_mid{
+	background-color: orange;
+	height: 36px;
+	width: 980px;
+	/*이걸로 안쪽 디브 크기 맞춤*/
+	position: relative;
+	margin: 0 auto;
+}
+
+div.link_app{
+	background-color: yellow;
+	float: left;
+}
+
+.link_app > a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 11px 9px;
+	/*이걸로 글씨 디브안에서 자기 위치 맞춤*/
+}
+
+ul.account {
+	margin: 0px;
+	/*이거 안 주면 혼자 밑으로 내려옴*/
+	background-color: green;
+	position: relative;
+	float: right;	
+}
+
+.account > li{
+	float: left;
+	position: relative;
+}
+
+.account > li > a {
+	display: block;
+	height: 17px;
+	padding: 10px 10px 9px 10px;
+	text-align: center;
+}
+
+/*=============header==============*/
+div.header_wrap {
+	position: relative;
+}
+
+div.header_mid {
+	background-color: red;
+	position: relative;
+	height: 98px;
+	width: 980px;
+	margin: 0 auto;
+}
+
+.header_mid h1{
+	background-color: orange;
+	float: left;
+	margin: 16px 0 0 0;
+}
+
+form.searchbar {
+	background-color: yellow;
+	position: relative;
+	float: left;
+	margin-top: 30px;
+	margin-left: 25px;
+}
+.searchbar > input{
+	width: 178px;
+	height: 38px;
+	border-width: 1px;
+	border-style: solid;
+}
+.searchbar > button{
+	background-color: yellow;
+	/*background: url(./img/searchIcon.png) center;*/
+	/*이렇게 하던데... 잘 안되네... */
+	width: 38px;
+	height: 38px;
+	/*position: absolute;*/
+	top: 2px;
+	right: 0;
+	border: 0px;
+}
+
+ul.header_btn{
+	float: right;
+}
+.header_btn > li{
+	float: left;
+}
+.header_btn > li > a {
+	display: block;
+	height: 48px;
+	margin: 25px 0 25px 20px;
+	/*마지막 원래 50px인데 넘어가서 20줌... 문제*/
+}
+.header_btn > li > a > img{
+	display: block;
+}
+
+/*=============nav=================*/
+div.nav_wrap {
+	position: relative;
+	background: #483f35;
+}
+
+nav.navi {
+	width: 980px;
+	height: 52px;
+	margin:  0 auto;
+	overflow: visible;
+
+	display: block;
+}
+
+ul.nav_btn {	
+}
+
+.nav_btn > li{
+	width: 120px;
+	/* 실제론 네비게이션 글씨마다 id 통해 크기가 다름 */
+	float: left;
+	/* 아래위를 좌우나열로 바꿈 */
+	position: relative;
+	text-align: left;
+}
+
+.nav_btn > li > a{
+	display: block;
+	padding: 5px 0 0 1px;
+	text-decoration: none;
+}
+
+.nav_btn > li > a > span{
+	display: inline-block;
+	color: white;
+	font-size: 16px;
+	height: 36px;
+	text-align: center;
+	letter-spacing: 0px;
+	padding: 11px 25px 0px;
+}
+/*=============main_container======*/
+
+div.main_container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+div.slides_container {
+	background-color: red;
+	position: relative;
+	text-align: center;
+	height: 420px;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.main_slides_wrap .bx-wrapper {
+	text-align: left;
+}
+.bx-wrapper {
+	margin: 0 auto;
+	background: #fff;
+}
+.slides_container ul.slides_pagination {
+	z-index: 55;
+	position: relative;
+	bottom: 30px;
+	width: 100%;
+	height: 0;
+	overflow: visible;
+}
+ul.main_slides_lst {
+	overflow: hidden;
+	height: 420px;
+}
+ul.main_slides_lst li a {
+	display: block;
+	width: 980px;
+	height: 420px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-indent: -3000px;
+}
+.slides_container ul.slides_pagination {
+	z-index: 55;
+	position: relative;
+	bottom: 30px;
+	width: 100%;
+	height: 0;
+	overflow: visible;
+}
+.slides_container ul.slides_pagination li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 3px;
+}
+.slides_container div.slides_navi {
+	width: 100%;
+}
+.slides_container div.slides_navi a.slides_prev {
+	right: 50%;
+	margin-right: 530px;
+	background-position: left center;
+}
+.slides_container div.slides_navi a {
+	z-index: 55;
+	display: block;
+	width: 60px;
+	height: 92px;
+	text-indent: -3000px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	margin-top: -46px;
+	background: url(https://cdn.bmf.kr/web/common/main_slides_navi.png) no-repeat center center;
+}
+.slides_container div.slides_navi a.slides_next {
+	left: 50%;
+	margin-left: 530px;
+	background-position: right center;
+}
+.slides_container ul.slides_pagination li a {
+	display: block;
+	width: 10px;
+	height: 0;
+	padding: 10px 0 0 0;
+	overflow: hidden;
+	background: #FFF;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+
+/* main_slides 끝*/
+/* main_tabs 시작*/
+div.products_tabs_wrap{
+	background: #eee;
+	position: relative;	
+}
+.best_prds{
+	height: 680px;
+}
+.content{
+	position: relative;
+	width: 980px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.best_prds div.title{
+	margin: 40px 0 42px;
+	text-align: center;
+	position: relative;
+}
+.title > h2{
+	font-size: 50px;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+	zoom: 1;
+}
+
+ul.tabs {
+	background-color: red;
+	height: 48px;
+	margin: -15px 10px 23px;
+	padding: 0px;
+	font-size: 0;
+	line-height: 0;
+}
+.tabs > li{
+	background-color: orange;
+	display: inline-block;
+	zoom:1;
+	float: left;
+	height: 48px;
+}
+.tabs > li > a {
+	display: block;
+	width: 159px;
+	height: 33px;
+	padding-top: 17px;
+	text-align: center;
+	background-color: white;
+	font-size: 15px;
+	margin-right: 1px;
+	margin-left: 0;
+	padding-left: 0;
+	line-height: 1.2;
+	color: #777;
+	
+
+}
+.tabs > li > a.now{
+	background: #1fcbc7;
+	color: white;
+}
+
+ul.prds_list{
+	overflow: hidden;
+	padding: 0;
+	width: 960px;
+	margin-left: 10px
+}
+.prds_list > li.prds_box{
+	position: relative;
+	overflow: hidden;
+	float: left;
+	width: 304px;
+	height: 429px;
+	margin: 0 16px 10px 0;
+	background: white;
+	border-bottom: 1px solid #d7d7d7;
+}
+
+.prds_box div.thumb_img{
+	position: relative;
+	overflow: hidden;
+}
+.prds_box div.thumb_img p{
+	height: 300px;
+}
+.prds_box div.thumb_img p img{
+	max-width: 100%;
+}
+
+.prds_box > dl{
+	padding: 18px 20px 15px;
+	height: 90px;
+	text-align: left;
+}
+.prds_box  dl  dt.prd_title{
+	font-size: 17px;
+	margin-bottom: 6px;
+	color: black;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*글씨 넘어가는건 점점점*/
+	white-space: nowrap;
+}
+.prds_box  dl  dd.prd_desc{
+	margin-bottom: 21px;
+	font-size: 13px;
+	color: #666;
+	width: 100%;
+	overflow: hidden;
+	letter-spacing: -0.07em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.prds_box  dd.prd_price{
+	float: right;
+}
+.prds_box  span.price{
+	letter-spacing: -0.04em;
+	margin-left: 9px;
+	font-size: 26px;
+	color: #2ac1bc;
+	font-weight: bold;
+	vertical-align: middle;
+	line-height: 1;
+}
+.prds_box  span.won{
+	font-size: 14px;
+	padding-left: 2px;
+	color: #2ac1bc;
+	font-weight: 600;
+	position: relative;
+	top: -3px;
+}
+
+/* main_tabs 끝*/
+/* main_roll 시작*/
+
+.all_wrapper{
+	/*padding-top: 100px;*/
+	margin-top:100px;
+	background-color: white ;
+	width: 100%;
+	height: 800px;
+
+}
+.roll_top{
+	/*background-color: yellow;*/
+	width: 800px;
+	height: 100px;
+}
+
+.roll_wrapper div.title{
+	margin: 40px 0 42px;
+	text-align: center;
+	position: relative;
+}
+
+.roll_wrapper{
+	margin: 0 auto ;
+	/*background-color: orange;*/
+	height: 600px;
+	width: 800px;
+	clear: none;
+	overflow: hidden;
+
+
+}
+
+.roll_box{
+	display: block;
+	float: left;
+	height: 350px;
+	/*line-height: 300px;*/
+	font-size: 40px;
+	text-align: center;
+	width: 198px;
+	border: 1px solid white;
+}
+
+.bottom{
+	text-align: center;
+	font-size: 30px;
+	line-height: 100px;
+	width: 100%;
+	height: 100px;
+	background-color: green;
+}
+
+
+#roll_left{
+	width: 50px;
+	height: 50px;
+	/*background-color:blue ;*/
+	float: left;
+	margin-left: 5%;
+	font-size: 20px;
+	margin-top: 300px;
+	/*line-height: 100px;*/
+	position:absolute;
+	text-align: center;
+	visibility:visible;
+}
+#roll_right{
+	width: 50px;
+	height: 50px;
+	margin-left: 90%;
+	/*background-color:blue ;*/
+	float: right;
+	font-size: 20px;
+	margin-top: 300px;
+	/*line-height: 100px;*/
+	position:absolute;
+	text-align: center;
+	visibility:visible;
+}
+
+.roll_navi{
+	margin: 0 auto;
+}
+.roll_navi img{
+	width: 50px;
+	height: 50px;
+}
+/*롤러 안쪽 */
+.roll_box a{
+	display: block;
+	height: 345px;
+}
+
+.roll_box div.thumb_img{
+	position: relative;
+	height: 215px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.roll_box div.thumb_img img{
+	max-width: 100%;
+}
+
+.roll_box dl{
+	text-align: center;
+	padding: 18px 10px 12px 10px; 
+}
+.roll_box dl dt.prd_title{
+	margin-bottom: 5px;
+	font-size: 16px;
+	letter-spacing: -0.07em;
+	color: black;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.roll_box dl dd.prd_desc{
+	font-size: 13px;
+	color: #666;
+	width: 100%;
+	margin-bottom: 11px;
+	overflow: hidden;
+	letter-spacing: -0.07em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.roll_box dl dd.prd_price{
+	text-align: center;
+	letter-spacing: 0;
+}
+
+/* 광고 부분 */
+div.prds_banner{
+	background: no-repeat center top #fff;
+    height: 140px;
+}
+/*=============bottom==============*/
+
+/*=============footer==============*/
+
+
+

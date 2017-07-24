@@ -1,0 +1,22 @@
+							{{#each this}}
+				                <li class="roll_box selected">
+				                	<a href="#" class="real_btn">
+				                		<div class="thumb_img">
+				                			<p>
+												<img src="{{this.image}}" id="{{this.detail_hash}}">
+											</p>	
+				                		</div>
+
+				                		<dl>
+				                			<dt class="prd_title" id="{{this.detail_hash}}">{{this.title}}</dt>
+											<dd class="prd_desc" id="{{this.detail_hash}}">{{this.description}}</dd>
+											<dd class="prd_price" >
+												<span class="price" id="{{this.detail_hash}}">{{this.s_price}}
+													<span class="won"></span>
+												</span>
+											</dd>
+				                		</dl>          	
+				                	</a>
+				                </li>
+				            {{/each}}    
+				      
